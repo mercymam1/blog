@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<html>				
+<head>	
+<meta name="viewport" content="width=device-width, initial-scale=1">							
+	<title>Portfolio</title>
+	</head>				
+<body style= "background-color: black;">
+
+<nav class= "topnav" style="background-color: black;" ;>
+
+<a href="{% url 'post_list' %}" style="color: white">Home</a>
+<a href="#" style="color: white">Portfolio</a>
+<a href="{% url 'Resume' %}" style="color: white">Resume</a>
+<a href="{% url 'blogging' %}" style="color: white">Blog</a>
+
+</nav>
+<img src="{% static 'Pimage.jpeg' %}" style="width: 100%">
+<center>
+<p style= "color: white;">
+Sorry.....currently no portfolio
+</p>
+</center>
+</body>
+</html>
