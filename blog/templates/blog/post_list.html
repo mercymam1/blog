@@ -11,11 +11,11 @@
 
 
 <nav class= "topnav";>
- 
+
 <a href="#" >Home</a>
 <a href="#" >Portfolio</a>
 <a href="#" >Resume</a>
-<a href="#" >Blog</a>
+<a href="{% url 'blogging' %}" >Blog</a>
 
 </nav>
 
@@ -37,7 +37,7 @@
 
 <nav class= box;>
 <a href=""><img src="{%static 'me.jpg' %}" alt=""/></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-<a href=""><img src= "{% static 'blog.jpg' %}" alt=""/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+<a href="{% url 'blogging' %}"><img src= "{% static 'blog.jpg' %}" alt=""/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
 <a href=""><img src= "{% static 'mee.jpg'%}" alt=""/></a>
 </nav>
 
