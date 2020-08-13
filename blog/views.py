@@ -1,9 +1,13 @@
+import operator
+from django.db.models import Q
 from	django.shortcuts	import	render 
 from	django.utils	import	timezone 
 from	.models	import	Post
 from	django.shortcuts	import	render,	get_object_or_404
 from	.forms	import	PostForm
 from django.shortcuts import redirect
+
+
 
 
 def	post_list(request):				
@@ -51,4 +55,13 @@ def	post_edit(request,	pk):
 	return	render(request,	'blog/post_edit.html',	{'form':	form})
 
 
-
+def search(request):
+	template = 'blog/blogging.html'
+	query = request.Get.get('q')
+	results= Post.objects.filter(Q(title__icontains= query) | Q(body__icontains = query))
+	pages = pagination(request, results, num=1)
+	context = {
+	'items': pages[0],
+	'page_range' : pages[1],
+	}
+	return render(request, template, context)
